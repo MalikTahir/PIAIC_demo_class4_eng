@@ -42,7 +42,8 @@ jobs:
         cmd: install
     - name: installing surge
       run: npm install -g surge
-     
+    - name: creating build
+      run: npm run build
     - name: deploying on surge
-      run: surge --project ./build/index.js --domain http://bootcamp_class4_eng.surge.sh/ --token ${{secrets.surgeToken}}
+      run: surge --project ./build --domain http://bootcamp_class4_eng.surge.sh/ --token ${{secrets.surgeToken}}
       
