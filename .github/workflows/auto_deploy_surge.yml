@@ -44,5 +44,5 @@ jobs:
       run: npm install -g surge
      
     - name: deploying on surge
-      run: surge --project /home/runner/work/PIAIC_demo_class4_eng/PIAIC_demo_class4_eng/build/ --token ${{secrets.surgeToken}}
+      run: surge --domin http://bootcamp_class4_eng.surge.sh/ --token ${{secrets.surgeToken}}
       
